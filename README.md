@@ -73,6 +73,7 @@ Tools>Fiddler Options>HTTPS,勾选相应选项，安装证书
 
 **4、if 有mac的话，请去编译打包出任意一个 ios 的 debug 的app，并给出 debug app 的路径，else 编译打包出任意一个 Android 的 debug 的 app，并给出 Android 的 keystore 的目录所在**
 
-Android默认的debug.keystore路径是C:\Users\Book\.android
-
 debug的apk包请见“002-20160228”文件夹
+
+Android默认的debug.keystore路径是C:\Users\Book\\.android
+![dubug.keystore](http://i.imgur.com/rxa7N7L.png)
