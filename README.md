@@ -41,7 +41,7 @@ Fiddler 抓包截图：
 
 **3、获取proxy tools默认的ssl证书，并且在Android or IOS 上面进行安装，并给出安装的截图。**
 
-**<font color=#DC143C >ssl证书在手机上未安装成功，但是却成功抓到了https的请求</font>**
+**<font color=#DC143C >ssl证书在Android手机上未安装成功，但是却成功抓到了https的请求</font>**
 
 - 操作步骤如下：
 -
