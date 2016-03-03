@@ -1,9 +1,8 @@
-# youshuchang #
+##Youshuchang##
 
-## 2016.02.28 第2节课作业 ##
+### 2016年02月28日 第2节课作业 ###
 
 **1、给出ios开发者设置中的网络模拟的详情数据**
-
 
 - 100% Loss
 
@@ -69,6 +68,20 @@ Tools>Fiddler Options>HTTPS,勾选相应选项，安装证书
 > 无法安装截图
 
 ![手机上无法安装](http://i.imgur.com/HwqbYNi.png)
+
+-----------------------------------------分割线---------------------------------------
+
+证书终于安装成功了！！！
+
+- Fiddler证书安装截图
+
+![Fiddler证书安装截图](http://i.imgur.com/0wmQu98.png)
+
+- 网站证书安装截图
+
+![网站证书安装截图](http://i.imgur.com/dKqFPzk.png)
+
+
 
 
 **4、if 有mac的话，请去编译打包出任意一个 ios 的 debug 的app，并给出 debug app 的路径，else 编译打包出任意一个 Android 的 debug 的 app，并给出 Android 的 keystore 的目录所在**
