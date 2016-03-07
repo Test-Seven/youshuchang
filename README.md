@@ -1,4 +1,20 @@
 **youshuchang**
+### 2016年03月06日 第3节课作业 ###
+
+1.反编译任意apk，并截图
+
+2.aapt命令查询权限，并且截图
+
+3.编写3中不同切入点的Andriod monkey的命令，并成功运行，同时说明切入点是什么。
+
+4.请找出motion和touch对应的源码里的方法，并找出monkey工具实现点击的最基础的方法是什么
+
+5.找到任意一个apk or ipa，然后去寻找里面的db，并打开db
+
+6.mac IOS github上去找monkey.js,去instruments运行，给instruments运行的结果图
+
+7.安装下idevicestaller，获取下IOS日志
+
 
 ----------------------------------------分割线---------------------------------------------
 
@@ -41,12 +57,11 @@ Fiddler 抓包截图：
 
 **3、获取proxy tools默认的ssl证书，并且在Android or IOS 上面进行安装，并给出安装的截图。**
 
-**<font color=#DC143C >ssl证书在Android手机上未安装成功，但是却成功抓到了https的请求</font>**
+**<font color="#DC143C" >ssl证书在Android手机上未安装成功，但是却成功抓到了https的请求</font>**
 
 - 操作步骤如下：
--
-- 配置Fiddler
 
+> 配置Fiddler
 
 Tools>Fiddler Options>HTTPS,勾选相应选项，安装证书
 
@@ -58,7 +73,7 @@ Tools>Fiddler Options>HTTPS,勾选相应选项，安装证书
 
 ![Fiddler证书](http://i.imgur.com/MduYWzN.png)
 
-- 抓包成功
+> 抓包成功
 
 ![抓包成功](http://i.imgur.com/5YDWoYZ.png)
 

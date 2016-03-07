@@ -1,0 +1,193 @@
+IOS不要直接在开发者模式修改默认的网络，需要其他的就新建一个网络
+
+下节课内容
+ios的UIAutomation
+android的instrumentation  
+robotium
+
+作业
+1.反编译任意apk，并截图
+2.aapt命令查询权限，并且截图
+3.编写3中不同切入点的Andriod monkey的命令，并成功运行
+同时说明切入点是什么
+4.请找出motion和touch对应的源码里的方法，并找出monkey工具实现点击的最基础的方法是什么
+5.找到任意一个apkoripa，然后去寻找里面的db，并打开db
+6.mac IOS github上去找monkey.js,去instruments运行，给instruments运行的结果图
+7.安装下idevicestaller，获取下IOS日志
+
+基础的安全
+
+对拦截包修改，是不是做了校验（包括客户端和服务端）
+
+一、安卓
+1.混淆：混淆规则  默认原则proguard
+测试需要做的：
+反编译apk dex2jar
+apk改为zip 解压 用dex2jar 将****转换成jar包，打开jar包，
+方法是否被混淆，我们的一些核心逻辑的代码
+一定要严格的规范我们的混淆的rule，不能经常修改
+例如迭代项目来讲，混淆以后编译不一定能编译的通，混淆的规则可能都给改了，无法评估影响面，对于测试来说就要全回归
+
+
+2、权限
+aapt 命令可以直接来查询安卓 apk的权限使用
+
+3.本地数据的安全
+
+adb shell 
+ls命令可以看到安卓系统的命令结构
+
+对于一个安卓系统而言，应用分成两种
+第一种叫做原生应用（烧录在rom里的应用）
+固有的应用 system/app/***apk
+
+3rd（第三方应用） app data/data/packagename/com.*****.***/cache,file,
+cache,file
+adb pull /data/data/com.***/cache/....db /users/admin/xxx/xxx.db
+
+sqllite,sqlxxxx
+
+本地数据库是否加密，db本身是否加密，db的表是否加密
+
+打开db是否输入密码
+
+4.敏感词（）
+
+shell python 通过正则表达式（re）来进行敏感词的扫描
+
+IOS日志 ，安卓 日志，server日志，字符串处理
+
+adb能不能安装卸载
+ddms 截图，查看日志
+
+
+工具：              MonkeyRunner         Monkey
+ 
+编写脚本           一定需要（python）    不需要
+一层实现           jython                java
+提供对外暴漏的api  有                    没有
+断言               有（特殊）            没有
+插件                jar                  java
+
+jython：Python语言在Java中的完全实现
+
+andriod、IOS中    app测试（断言一定要细）    os测试（断言保证每个界面是对的）
+
+sameAs（Image,Float) Float:0-1,小数点1位
+图片1 图片2 时间电量对不上
+不同的手机，像素值有轻微的偏差
+所以monkeyrunnner比较适合去测os
+看一个工具好不好，要看断言的颗粒度细不细
+
+
+Monkey ：
+
+Andriod sdk自带的半自动化的工具
+
+伪随机数的自动化工具
+
+什么是伪随机数 java random seed
+
+同一个seed生成的随机序列是固定的
+
+demo:
+adb -s 123456 shell monkey -p com.android.mms -p com.andriod.brcer
+--pct-motion 20 --pct-motion-trackball 0 --pct-touch 10 --pct-appswitch 10 --ignore-timeouts --ignore-crashes --throttle 500 -s 2222 -v -v -v 100000
+
+timeouts ANR 线程堵塞
+crashes crash   event
+
+-throttle 间隔时间 500ms 避免频繁出现anr  贴近用户使用的场景
+
+第一个-s 设备编编号  通过adb devices获得 
+
+第二个-s 种子
+
+shell python  ruby go monkey的命令脚本化
+
+每个脚本都有偏重点
+1.多点击，多滑动的操作
+2.多应用切换
+3.手机硬件按钮对于应用的效果
+
+
+monkey命令只针对在app中有注册activity的应用有效
+
+No activities  found，monkey aboard 
+
+比如输入法，除了settings，任何一个地方都没有activity，无法使用monkey测试
+
+兼容性的测试：Andriod cts 
+1.cts官方给出来的代码里测试用例最多
+2.ut,ui
+
+
+通用的一个流程：
+
+PRD，系统分析，测试分析，设计交互稿，评审，编写case，编写code
+冒烟，验收，第一轮，第二轮，第N轮（专项）
+内灰
+外灰
+
+系统分析：
+系统，测试
+业务，说明业务
+功能描述
+本地系统，或者服务端系统的架构图
+参数的设置，参数的属性
+
+测试分析：（类似test plan）
+checklist（测试点）
+测试工具，输出什么
+风险点：比如不知道怎么测，测试工具没有用过
+
+评审：产品、设计，交互设计，测试开发都要参加（避免马后炮，推责任）
+
+冒烟（Appuim，核心链路）
+验收（人工验收）：400条case，拿出核心case做验收
+
+验收通过：正式测试
+验收不通过：deadline不会更改，加班加点完成，完不成的话风险点由开发承担
+
+专项会贯穿整个研发过程当中
+内灰 andirod都走release， IOS：adhock  企业证书，尽量内部发
+
+用到自动化的地方：打包（用脚本打出不同签名不同版本的包），冒烟（UI这块只做冒烟，只测试核心业务，每隔2-3次迭代增加冒烟，保证稳定），api（接口）比较严格：
+接口层面的：100%覆盖
+case层面：100%覆盖
+后台涉及的链路层面100%
+
+有系统严格监控统计数据，不达到是很难去发布的
+
+接口：Junit+testng 数据驱动
+
+打包和冒烟是平台是分开的，但是只要打包，就有冒烟
+除了触发打包这个行为是人为的，其他都不需要
+
+测试工具组：
+
+以前的模式                        
+A团队来做工具                     
+B业务团队来用工具
+B业务团队来提工具的需求和bug
+A团队来满足和修复
+
+现在的模式
+A团队做的是一个平台（common的sdk，结果的展现平台，db存储）
+B团队会在base在A团队的sdk上去做业务的封装，相当于自己满足自己的需求，然后在业务上落地
+
+比如我们要做一个线上的api的巡检。
+app中有线上的url，hybrid并且有线上服务的时候
+当app没有发布的时候我们测试的功能
+app已经发布之我们测试的功能，其实并不是一个东西
+
+第一，产出一个界面，界面能够通过团队自定义的规则来绘制结果（趋势图，api访问的结果，detail）
+第二，产出一个common sdk，包括login，包括怎么去写db的api，包括怎么去回执结果的api
+第三，产出一个能够去存储不同的数据结构的db的对外暴露的api
+
+大数据进行专项测试
+Andriod，所有的组件，View，内存管理，发送请求
+包括自动定义，二次封装，重写的
+发送一个请求，body size，request response的时间
+dns，delay，调用请求方法的延迟时间等等
+当需要拿到需要非常细节的数据，就需要系统的方法进行改写和二次封装
