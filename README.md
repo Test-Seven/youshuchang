@@ -1,15 +1,40 @@
 **youshuchang**
 ### 2016年03月06日 第3节课作业 ###
 
-1.反编译任意apk，并截图
+**1.反编译任意apk，并截图**
 
-2.aapt命令查询权限，并且截图
+反编译截图如下：
+![反编译截图](http://i.imgur.com/IhxLFJP.png)
+
+**2.aapt命令查询权限，并且截图**
+
+aapt命令查询权限截图如下：
+![aapt查询apk权限](http://i.imgur.com/0uHrNZZ.png)
 
 3.编写3中不同切入点的Andriod monkey的命令，并成功运行，同时说明切入点是什么。
 
+- 多点击
+    
+  ```shell adb -s 192.168.56.101:5555 shell monkey -p com.xxx.xxx  -pct-touch 80 -pct-motion 15 -pct-nav 5  --pct-motion-trackball 0 --ignore-timeouts --ignore-crashes --throttle 500 -s 88 -v -v -v 1000 ```
+
+- 多应用切换
+
+ ```shell adb -s 192.168.56.101:5555 shell monkey -p com.xxx.xxx -p com.xxx.xxx -p com.xxx.xxx  -pct-touch 80 -pct-motion 15 -pct-nav 5  --pct-motion-trackball 0 --ignore-timeouts --ignore-crashes --throttle 500 -s 88 -v -v -v 1000```
+
+- 手机硬件按钮对于应用的效果
+
+ ```shell adb -s 192.168.56.101:5555 shell monkey -p com.xxx.xxx -p com.xxx.xxx -p com.xxx.xxx -pct-touch 10 -pct-motion 10 -pct-nav 50 -pct-majornav 30  --pct-motion-trackball 0 --ignore-timeouts --ignore-crashes --throttle 500 -s 88 -v -v -v 1000```
+
 4.请找出motion和touch对应的源码里的方法，并找出monkey工具实现点击的最基础的方法是什么
 
+
+
 5.找到任意一个apk or ipa，然后去寻找里面的db，并打开db
+- db文件见文件夹"003-20160306"
+- 查看数据库数据截图如下：
+
+![db文件截图](http://i.imgur.com/kkwr5AG.png)
+
 
 6.mac IOS github上去找monkey.js,去instruments运行，给instruments运行的结果图
 
