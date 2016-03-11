@@ -25,15 +25,81 @@ aapt命令查询权限截图如下：
 
  ```adb -s 192.168.56.101:5555 shell monkey -p com.xxx.xxx -p com.xxx.xxx -p com.xxx.xxx -pct-touch 10 -pct-motion 10 -pct-nav 50 -pct-majornav 30  --pct-motion-trackball 0 --ignore-timeouts --ignore-crashes --throttle 500 -s 88 -v -v -v 1000```
 
-4.请找出motion和touch对应的源码里的方法，并找出monkey工具实现点击的最基础的方法是什么
+**4.请找出motion和touch对应的源码里的方法，并找出monkey工具实现点击的最基础的方法是什么**
 
 
+- motion源码的方法：
+   
+ ```public int injectEvent(IWindowManager paramIWindowManager, IActivityManager paramIActivityManager, int paramInt)
+  {
+    paramIWindowManager = getEvent();
+    if (((paramInt > 0) && (!this.mIntermediateNote)) || (paramInt > 1))
+    {
+      paramIActivityManager = new StringBuilder(":Sending ");
+      paramIActivityManager.append(getTypeLabel()).append(" (");
+      switch (paramIWindowManager.getActionMasked())
+      {
+      case 4: 
+      default: 
+        paramIActivityManager.append(paramIWindowManager.getAction());
+      }
+      for (;;)
+      {
+        paramIActivityManager.append("):");
+        int i = paramIWindowManager.getPointerCount();
+        paramInt = 0;
+        while (paramInt < i)
+        {
+          paramIActivityManager.append(" ").append(paramIWindowManager.getPointerId(paramInt));
+          paramIActivityManager.append(":(").append(paramIWindowManager.getX(paramInt)).append(",").append(paramIWindowManager.getY(paramInt)).append(")");
+          paramInt += 1;
+        }
+        paramIActivityManager.append("ACTION_DOWN");
+        continue;
+        paramIActivityManager.append("ACTION_MOVE");
+        continue;
+        paramIActivityManager.append("ACTION_UP");
+        continue;
+        paramIActivityManager.append("ACTION_CANCEL");
+        continue;
+        paramIActivityManager.append("ACTION_POINTER_DOWN ").append(paramIWindowManager.getPointerId(paramIWindowManager.getActionIndex()));
+        continue;
+        paramIActivityManager.append("ACTION_POINTER_UP ").append(paramIWindowManager.getPointerId(paramIWindowManager.getActionIndex()));
+      }
+      System.out.println(paramIActivityManager.toString());
+    }
+    try
+    {
+      boolean bool = InputManager.getInstance().injectInputEvent(paramIWindowManager, 1);
+      if (!bool) {
+        return 0;
+      }
+      return 1;
+    }
+    finally
+    {
+      paramIWindowManager.recycle();
+    }
+  } ```
 
-5.找到任意一个apk or ipa，然后去寻找里面的db，并打开db
+- touch源码的方法：
+
+ ```public MonkeyTouchEvent(int paramInt)
+  {
+    super(1, 4098, paramInt);
+  } ```
+
+- monkey工具实现点击的最基础的方法
+
+ ```public abstract int injectEvent(IWindowManager paramIWindowManager, IActivityManager paramIActivityManager, int paramInt);```
+
+**5.找到任意一个apk or ipa，然后去寻找里面的db，并打开db**
+
 - db文件见文件夹"003-20160306"
+
 - 查看数据库数据截图如下：
 
-![db文件截图](http://i.imgur.com/kkwr5AG.png)
+![db文件截图](http://i.imgur.com/Kgh6kKF.png)
 
 
 6.mac IOS github上去找monkey.js,去instruments运行，给instruments运行的结果图
