@@ -1,0 +1,166 @@
+P1
+视觉  交互 （弱网）
+
+P2
+大量使用国外的APP
+官方文档（design guideline）
+习惯的培养（原生的习惯培养+国情专属（如微信、微博、QQ））
+
+P3
+Andriod/IOS:
+
+验证：
+使用图片来验证（图片转换成先估算点的数组来做验证）
+100%对比
+局部区域对比
+去掉局部区域对比
+
+兼容性 每个版本都要用
+
+Android CM
+
+IOS 越狱机器
+
+做安全和专项必须有一台安卓root  和IOS越狱机器  
+
+low network
+2G
+3G
+edge（2.5G）
+wifi
+弱网切换
+无网
+死网
+
+作业1：是啥？断线了
+
+抓包和网络模拟
+charles（mac）
+fiddler（win）
+
+作业2：fiddler抓包，给出抓包的截图
+
+burpsuite（both）
+ATC（both）
+AnyProxy
+
+kbps:kb/s=8:1
+
+rpc请求
+所有的抓包工具只支持http
+https 需要ssl的证书
+
+1、proxy工具都有自己对应的ssl证书
+2、获取到app所在域的那个ssl证书
+将firefox绑定代理
+firefox 访问网站  获得证书 .crt .cer
+装到手机上
+
+作业3：获取proxy tool 的默认的ssl证书，以及网站的ssl证书，并且在手机上安装，给出安装截图
+
+burpsuite（both）是一个jar包
+intercept is on 会拦截请求和响应 点drop才会发送
+request body 修改它的requst body
+水平权限的验证： 服务端和客户端接收到错误的数据会如何响应
+
+重要参数改为有效值范围内的错误值，看服务器的返回
+
+ATC（both）不建议在win上，可以在linux mac
+ATC是一个热点模拟：可以同时在一台PC上模拟不同网速
+
+AnyProxy是一个alibaba开源的工具
+本身是一个终端的command的工具
+可以将抓取的信息重定向到文件中，可以实现自动化
+再使用python shell做解析
+
+关于证书：debug证书，release证书
+没有证书的apk和ipa（unsigned）是没有办法运行的
+都有config机制 打开log 关闭log
+
+android  debug证书sdk自带  需要company  密码  生成release证书
+
+IOS 
+keychain证书
+debug证书  .p12.distrubution
+xcode编译然后再在真机上运行
+1、拥有开发者账号
+2、拥有要安装的手机的udid
+3、将udid在apple服务器上加入你的证书中
+4、重新生成证书和签名，并download
+
+android debug或者release包可以状态任何一个手机
+
+1、debug证书只能装在模拟器
+2、开发者证书只能装在指定的拥有udid的机器上
+3、release签名，只能装在通过APP store 下载的手机上或者同2
+4、adhoc和企业版整数，装在任意手机上，只不过苹果对其做数量的限制
+企业版证书与release证书冲突，最好只给内部人做灰度测试用，如果给外部人用会有安全风险
+作业4：如果有mac，请去编译打包出任意一个debug的APP，并
+
+编译打包出任意一个安卓的debug的app，并给出APP的keystore目录
+
+adb常用命令
+adb install  [apk]
+adb uninstall [package name]
+adb logcat (查看日志)
+adb shell
+(进入当前android系统的目录)
+
+ddms  用于截图
+hierarchyviewer 能够查看当前界面的实现结构
+
+xcode
+xcodebuild 打包
+instruments 测试
+brew install ideviceinstaller
+
+
+应用的架构
+应用的打包机制和库管理
+layout布局
+应用大部分功能都和服务器做交互 login 注册 支付
+下单背后对应的服务系统的链路
+
+系统特性
+activity和APP都有生命周期
+
+1、横竖屏
+andriod中的横竖屏
+activity被销毁然后重新create了
+
+2、activity堆栈  back按钮
+back被重写
+A
+B
+C
+d
+有一个应用做支付，A扫码到B界面，支付,再回到A界面展现我们的结果
+
+开发者模式下，杀掉 all active activity 
+
+push
+1、本地push
+2、主动push
+3、被动push
+
+功能角度：
+测试A应用的push功能
+1、已经在A应用内
+2、不在A应用
+3、在桌面
+4、在待机，关机 
+5、点击这个push，是否进入到相应的页面
+6、
+
+
+安卓使用第三方或者自己的
+
+IOS apple自带的
+
+
+
+
+
+
+
+

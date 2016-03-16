@@ -1,0 +1,82 @@
+
+作业
+1.制作一个app，有两个界面，可以通过点击按钮的方式进行跳转
+2.修改sppinner或者notpad的默认case，并执行通过。直接贴修改的代码
+3.看robotium源码
+
+
+
+基础
+ 
+
+appium的基础
+
+
+selendroid，UIautomator，UIautomation（iOS）
+
+instrumentation
+
+ActivityInstrumentationTestCase2
+
+特点：
+1.a.apk a-test.apk
+分别会跑在同一个进程里
+
+测试用例没有办法跨应用的（比如换头像）
+
+spinner项目
+
+src：源码
+
+gen：R.java用于注册控件的地址,拿到控件的中间桥梁，自动产生的文件，不需要手动修改
+
+assets：放置私有性的文件，比如文本的存储和文档的模板等等，安卓提供api处理文件
+
+bin：编译打包的过程以及生成的apk会在bin下
+
+res：drawable为了适应安卓不同的分辨率，存放不同分辨率的图片
+     layout每一个界面都会对应一个单独的layout的xml文件
+     values-strings.xml：定义提示语，大家去调用
+	styles.xml:自定义控件的样式，大家可以去引用
+AndroidManifest.xml：组件的注册，应用权限（permission）的注册，应用最低使用版本，应用最高使用版本。versioncode是测试的关注点，判断是否可以更新。
+
+有一些权限不允许使用，只给系统层使用
+
+appname不要写死，要去取。动态可配置的，或者通过上下业务链路获取，避免hardcode
+
+逻辑写在java中，界面写在layout中，它们之间是如何挂钩的？setContentView(R.layout.main);通过R资源文件进行关联
+监听方法：
+mbt.setClichListener(new view.onClickListner(){
+publice void onClick(Veiw v){
+
+}
+});
+
+
+四大组件的生命周期
+
+
+spinnertest
+
+setup:每个case开始前都会运行
+
+teardown：每个case结束时都会运行
+
+appuim：思想值得借鉴
+robotium:架构值得借鉴
+
+在test工程的library中引入robotium.jar
+解决的最大的问题：降低了case代码的复杂度
+
+Solo solo；
+solo.clickonbutton("确定")；
+
+依然不可以跨应用，如果跨应用仍然会报空指针
+
+
+
+
+
+
+
+
