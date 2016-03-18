@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="G:\004-Study\Git\youshuchang\004-20160313\Book\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="G:\004-Study\Git\youshuchang\004-20160313\Book\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.2.1_da84072e24bd472abffbed3125bbded63e09e302.jar" />
+    </item>
+    <item
+        jar="G:\004-Study\Git\youshuchang\004-20160313\Book\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="G:\004-Study\Git\youshuchang\004-20160313\Book\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.2.1_167d53635b7dbde0c7b3a932e0b2c364a2df93ed.jar" />
+    </item>
+    <item
+        jar="G:\003-Tools\Andriod\android-sdk-windows\extras\android\m2repository\com\android\support\support-annotations\23.2.1\support-annotations-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="G:\004-Study\Git\youshuchang\004-20160313\Book\app\build\intermediates\pre-dexed\debug\support-annotations-23.2.1_2d7375b3154368782da4264f4fd04bb7219822c5.jar" />
+    </item>
+    <item
+        jar="G:\004-Study\Git\youshuchang\004-20160313\Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="G:\004-Study\Git\youshuchang\004-20160313\Book\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.2.1_8cbcb172808a830df4d3119736a80a8fd9159e95.jar" />
+    </item>
+    <item
+        jar="G:\004-Study\Git\youshuchang\004-20160313\Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\libs\internal_impl-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="G:\004-Study\Git\youshuchang\004-20160313\Book\app\build\intermediates\pre-dexed\debug\internal_impl-23.2.1_1f9d2fc864fb19cb35a1d82826da2e8c86bb42a6.jar" />
+    </item>
+    <item
+        jar="G:\004-Study\Git\youshuchang\004-20160313\Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="G:\004-Study\Git\youshuchang\004-20160313\Book\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.2.1_423a4d6809ae86a4294a12bacca45d5f66f8834f.jar" />
+    </item>
+
+</items>

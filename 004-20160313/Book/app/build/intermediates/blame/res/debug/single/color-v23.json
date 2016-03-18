@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "G:\\004-Study\\Git\\youshuchang\\004-20160313\\Book\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
+        "source": "G:\\004-Study\\Git\\youshuchang\\004-20160313\\Book\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\color-v23\\abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "G:\\004-Study\\AndroidStudioProjects\\MyApplication\\Book\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
+        "source": "G:\\004-Study\\AndroidStudioProjects\\MyApplication\\Book\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\color-v23\\abc_color_highlight_material.xml"
+    }
+]
