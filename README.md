@@ -1,4 +1,9 @@
 **youshuchang**
+### 2016年03月19日 第5节课作业 ###
+
+**基于Appium，编写testerhome.apk的自动化用例脚本；用例应包含课程讲到过的定位方式，以及uiautomator scrollable的使用；用例覆盖3~4个场景；**
+
+
 
 ### 2016年03月13日 第4节课作业 ###
 
@@ -9,6 +14,7 @@
 [页面跳转代码](https://github.com/Test-Seven/youshuchang/tree/master/004-20160313/Book)
 
 **2.修改sppinner或者notpad的默认case，并执行通过。直接贴修改的代码**
+
 
 **3.看robotium源码**
 
