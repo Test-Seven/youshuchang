@@ -1,0 +1,47 @@
+第6次课 课堂笔记
+作业：
+1.写一个.fearture，上传.feature文件；#calabash-android run MyProjectDemo.apk 运行的截图 
+calabash 侵入式框架
+
+https://github.com/calabash/calabash-android
+
+#calabash-android
+
+#rvm rubies
+
+#calabash-android run MyProjectDemo.apk
+
+DSL
+BDD
+
+安装ruby
+设置国内的镜像源，taobao
+安装calabash
+建立feature文件夹
+ 
+
+Feature: the MPD CalaBash Demo
+
+  Scenario: The MPD CalaBash Demo
+    When I enter "欢迎大家来" into input field number 1
+    When I enter "无线测试培训" into input field number 2
+    When I press "5th ISTQB"
+    Then I see "hello11111"
+
+/Users/monkey/Documents/open_source/calabash-android/ruby-gem/test-server/instrumentation-backend/src/sh/calaba/instrumentationbackend/actions
+
+冒烟或者验收的时候用，每次都跑下
+
+
+Robolectric：单元测试框架，速度快，Android
+
+IOS：ocunit
+
+移动测试：
+用数据说话
+分层测试
+
+
+主要的界面和主要功能封装，比人只需要去调用
+
+native 接口  测试方法 UiAutomator

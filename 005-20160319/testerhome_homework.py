@@ -21,8 +21,8 @@ class SimpleAndroidTests(unittest.TestCase):
         desired_caps['platformName'] = 'Android'
         desired_caps['platformVersion'] = '4.2'
         desired_caps['deviceName'] = 'Android Emulator'
-        desired_caps['unicodeKeyboard'] = 'true'
-        desired_caps['resetKeyboard'] = 'true'
+        desired_caps['unicodeKeyboard'] = 'True'
+        desired_caps['resetKeyboard'] = 'True'
         desired_caps['app'] = PATH('testerhome.apk')
 
         self.driver = webdriver.Remote(
@@ -32,49 +32,29 @@ class SimpleAndroidTests(unittest.TestCase):
         # end the session
         self.driver.quit()
 
-    def test_view_first_article(self):
+    def test_login(self):
+        sideBar=self.driver.find_element_by_accessibility_id("Open navigation drawer")
+        sideBar.click()
+        headBtn=self.driver.find_element_by_accessibility_id("Close navigation drawer")
+        headBtn.click()
+        textList=self.driver.find_elements_by_class_name("android.widget.EditText")
+        textList[0].send_keys("Nancy")
+        textList[1].send_keys("123456")
+        textList[2].send_keys("123456")
+        loginBtn=self.driver.find_element_by_accessibility_id("登录")
+        loginBtn.click()
+    def test_article_comment(self):
         # find_element/find_elements
-        '''
-        topicTitle=self.driver.find_element_by_id("com.testerhome.nativeandroid:id/tv_topic_title")
-        topictTitleList=self.driver.find_elements_by_id("com.testerhome.nativeandroid:id/tv_topic_title")
-        topictTitleList[1].click()
-        '''
-
-        # 隐式等待10s
-        self.driver.implicitly_wait(10)
-        topicTitle = self.driver.find_element_by_id(
-            "com.testerhome.nativeandroid:id/tv_topic_title")
+        topicTitle = self.driver.find_element_by_id("com.testerhome.nativeandroid:id/tv_topic_title")
         topicTitle.click()
-        backBtn = self.driver.find_element_by_class_name(
-            "android.widget.ImageButton")
-        backBtn.click()
-
-
-    def test_search_article(self):
-        self.driver.implicitly_wait(10)
-        searchBtn = self.driver.find_element_by_id(
-            "com.testerhome.nativeandroid:id/action_search")
-        searchBtn.click()
-        searchEditText = self.driver.find_element_by_id(
-            "com.testerhome.nativeandroid:id/search_src_text")
-        searchEditText.send_keys("appium")
-        self.driver.keyevent(66)
-        sleep(5)
-
-        #self.driver.find_element_by_accessibility_id("")
-        # UiSelector().textContains()
-        #UiScrollable()
-
-    def test_view_topicA(self):
-        topicA=self.driver.find_element_by_android_uiautomator('new UiSelector().text("Apple QA Engineer 的面试记")')
-        topicA.click()
-        backBtn = self.driver.find_element_by_class_name("android.widget.ImageButton")
-        backBtn.click()
-
-
-    def test_view_topicB(self):
-        mrBugTitle=self.driver.find_element_by_android_uiautomator('new UiScrollable(new UiSelector().resourceId("com.testerhome.nativeandroid:id/vp_topics")).scrollIntoView(new UiSelector().text("元素在可视区域内，但是元素的坐标却是负数"))')
-        mrBugTitle.click()
+        commentBtn = self.driver.find_element_by_id("com.testerhome.nativeandroid:id/fab_add_comment")
+        commentBtn.click()
+        commentText = self.driver.find_element_by_id("com.testerhome.nativeandroid:id/etComment")
+        commentText.send_keys(u"赞！")
+        sentBtn=self.driver.find_element_by_id("com.testerhome.nativeandroid:id/btnSendComment")
+        sentBtn.click()
+    # def test_twiceback_exit(self):
+    #     self.
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(SimpleAndroidTests)

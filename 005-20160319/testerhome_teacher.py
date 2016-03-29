@@ -42,21 +42,17 @@ class SimpleAndroidTests(unittest.TestCase):
 
         # 隐式等待10s
         self.driver.implicitly_wait(10)
-        topicTitle = self.driver.find_element_by_id(
-            "com.testerhome.nativeandroid:id/tv_topic_title")
+        topicTitle = self.driver.find_element_by_id( "com.testerhome.nativeandroid:id/tv_topic_title")
         topicTitle.click()
-        backBtn = self.driver.find_element_by_class_name(
-            "android.widget.ImageButton")
+        backBtn = self.driver.find_element_by_class_name( "android.widget.ImageButton")
         backBtn.click()
 
 
     def test_search_article(self):
         self.driver.implicitly_wait(10)
-        searchBtn = self.driver.find_element_by_id(
-            "com.testerhome.nativeandroid:id/action_search")
+        searchBtn = self.driver.find_element_by_id("com.testerhome.nativeandroid:id/action_search")
         searchBtn.click()
-        searchEditText = self.driver.find_element_by_id(
-            "com.testerhome.nativeandroid:id/search_src_text")
+        searchEditText = self.driver.find_element_by_id( "com.testerhome.nativeandroid:id/search_src_text")
         searchEditText.send_keys("appium")
         self.driver.keyevent(66)
         sleep(5)
