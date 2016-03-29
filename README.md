@@ -8,6 +8,8 @@
 
 **1.基于Appium，编写testerhome.apk的自动化用例脚本；用例应包含课程讲到过的定位方式，以及uiautomator scrollable的使用；用例覆盖3~4个场景；**
 
+[测试脚本](https://github.com/Test-Seven/youshuchang/blob/master/005-20160319/testerhome_homework.py "测试脚本")
+
 ----------------------------------------分割线---------------------------------------------
 ### 2016年03月13日 第4节课作业 ###
 
