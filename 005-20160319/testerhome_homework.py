@@ -1,11 +1,14 @@
 # coding:utf-8
 __author__ = 'Book'
 
+import pexpect
+import subprocess
 import os
+import sys
+from uiautomator import Device
 from time import sleep
-
+import threading
 import unittest
-
 from appium import webdriver
 
 # Returns abs path relative to this file and not cwd
@@ -30,17 +33,6 @@ class SimpleAndroidTests(unittest.TestCase):
     def tearDown(self):
         # end the session
         self.driver.quit()
-    def protect(nub,device):
-        sleep(2)
-        for i in range(nub):
-            d = Device(device)
-            el1 = d(text="安装")
-            el2 = d(text="确定")
-        if el1.exists:
-            el1.click()
-        if el2.exists:
-            el2.click()
-        sleep(2)
     #登录
     def test_login(self):
         sideBar=self.driver.find_element_by_accessibility_id("Open navigation drawer")
