@@ -1,6 +1,12 @@
 **youshuchang**
+### 2016年04月01日 第7节课作业 ###
+**1.使用java的httpclient或者okhttpclient来编写API测试用例**
 
-### 2016年03月37日 第5节课作业 ###
+
+**2.battery-histrain，adb shell dumpsys batteryinfo还是batterystatus去查看wakelock**
+
+
+### 2016年03月27日 第6节课作业 ###
 **1.写一个.fearture，上传.feature文件；#calabash-android run MyProjectDemo.apk 运行的截图。**
 
 ----------------------------------------分割线---------------------------------------------
