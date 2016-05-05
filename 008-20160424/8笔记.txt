@@ -1,0 +1,79 @@
+appium：
+
+android：
+    native应用
+        4.3以上 UIAutomator
+        2.3以上 Selendroid
+    hybrid应用
+        2.3以上 Selendroid
+        4.4以上 ChromeDriver
+    移动网页应用
+
+IOS：
+    native应用
+        UIAntomation
+
+    Hybrid应用
+        模拟器：webkit remote debugger
+        真机：IOS-
+    移动网页应用
+
+appuim基本架构
+
+WebDriver
+   WebDriver
+   
+   
+http://selendroid.io/inspector.html
+
+$(“myButton”).click()
+
+instruments -t /Applications/XCode.app/Contents/Applications/Instruments.app/Contents/PlugIns/AutomationInstrument.xrplugin/Contents/Resources/Automation.tracetemplate -w "iPhone 6s (9.2) [0FE2239B-0341-4B2C-A5DA-986B010D7225]"  /Users/lihuazhang/Library/Developer/Xcode/DerivedData/TestApp-fujagumnnmzcyhgjahpitjiwblxk/Build/Products/Debug-iphonesimulator/TestApp.app -e UIASCRIPT "/Users/lihuazhang/Documents/UIAutomation/add_sum_v3.js" -e UIARESULTSPATH /tmp/appium-instruments
+
+
+
+Appium测试native应用的原理
+
+    Android
+
+    IOS
+
+APPium测试Hybrid应用的原理
+
+    Android
+        Selendroid
+        
+        document.getElementById("my").click
+
+        ChromeDriver
+
+    IOS
+
+
+chrome://inspect/#devices
+safari>高级>web检查器   webinspector
+
+安装命令
+brew install libmobiledevices
+
+
+1.webview debug没有打开
+2.你的容器是不是标准的
+
+IOS
+1.环境问题
+2.
+
+
+
+https://www.gitbook.com/book/lihuazhang/selendroid/details
+ Monke‭y‬(530646237) 14:47:28
+
+这个是色lendroid
+
+
+https://testerhome.com/topics/3588
+https://github.com/googlesamples/android-testing/tree/master/ui/espresso/BasicSampleBundled/libs
+
+
+macaca
