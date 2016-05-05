@@ -32,6 +32,24 @@ api测试用例：
 ### 2016年03月27日 第6节课作业 ###
 **1.写一个.fearture，上传.feature文件；#calabash-android run MyProjectDemo.apk 运行的截图。**
 
+
+运行命令
+    
+    calabash-android build ***.apk
+
+报错如下：
+
+    F:/softwarepath/Ruby200-x64/Ruby200-x64/lib/ruby/gems/2.0.0/gems/calabash-android-0.7.2/lib/calabash-android/dependencies.rb:49:in java_dependencies': No such file '\Program Files\Java\jdk1.7.0_79\bin/keytool.exe' (RuntimeError)
+    from F:/softwarepath/Ruby200-x64/Ruby200-x64/lib/ruby/gems/2.0.0/gems/calabash-android-0.7.2/lib/calabash-android/dependencies.rb:81:inkeytool_path'
+    from F:/softwarepath/Ruby200-x64/Ruby200-x64/lib/ruby/gems/2.0.0/gems/calabash-android-0.7.2/lib/calabash-android/java_keystore.rb:9:in initialize'
+    from F:/softwarepath/Ruby200-x64/Ruby200-x64/lib/ruby/gems/2.0.0/gems/calabash-android-0.7.2/lib/calabash-android/java_keystore.rb:80:innew'
+    from F:/softwarepath/Ruby200-x64/Ruby200-x64/lib/ruby/gems/2.0.0/gems/calabash-android-0.7.2/lib/calabash-android/java_keystore.rb:80:in read_keystore_with_default_password_and_alias'
+    from F:/softwarepath/Ruby200-x64/Ruby200-x64/lib/ruby/gems/2.0.0/gems/calabash-android-0.7.2/lib/calabash-android/java_keystore.rb:99:inget_keystores'
+    from F:/softwarepath/Ruby200-x64/Ruby200-x64/lib/ruby/gems/2.0.0/gems/calabash-android-0.7.2/bin/calabash-android-build.rb:5:in calabash_build'
+    from F:/softwarepath/Ruby200-x64/Ruby200-x64/lib/ruby/gems/2.0.0/gems/calabash-android-0.7.2/bin/calabash-android:71:in<top (required)>'
+    from F:/softwarepath/Ruby200-x64/Ruby200-x64/bin/calabash-android:23:in load'
+    from F:/softwarepath/Ruby200-x64/Ruby200-x64/bin/calabash-android:23:in<main>'
+
 ----------------------------------------分割线---------------------------------------------
 ### 2016年03月19日 第5节课作业 ###
 
