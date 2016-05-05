@@ -2,7 +2,8 @@
 ### 2016年04月01日 第7节课作业 ###
 **1.使用java的httpclient或者okhttpclient来编写API测试用例**
 
-
+api测试用例：
+[APITEST](https://github.com/Test-Seven/youshuchang/tree/master/007-20160410/APITEST)
 
 **2.battery-histrain，adb shell dumpsys batterystatus去查看wakelock**
 
