@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/OSGi%Minimum-1.2"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<accessrules>
+			<accessrule kind="accessible" pattern="sun/**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/access-bridge-64.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/cldrdata.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/dnsns.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/fluent-hc-4.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/httpclient-cache-4.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/httpclient-win-4.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/httpmime-4.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/jaccess.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/jfxrt.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/jna-4.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/jna-platform-4.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/localedata.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/nashorn.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/sunec.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/sunjce_provider.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/sunmscapi.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/sunpkcs11.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/zipfs.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/json-lib-2.4-jdk15.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_65/jre/lib/ext/java-json.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
