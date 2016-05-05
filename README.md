@@ -11,6 +11,19 @@
 
     $ adb bugreport > bugreport.txt
 
+生成
+
+[bugreport.txt](https://raw.githubusercontent.com/Test-Seven/youshuchang/master/007-20160410/bugreport.txt "bugreport.txt")
+
+运行
+
+    $ go run cmd/battery-historian/battery-historian.go
+
+上传生成的
+[bugreport.txt](https://raw.githubusercontent.com/Test-Seven/youshuchang/master/007-20160410/bugreport.txt "bugreport.txt")
+
+报错，如下图
+![battery-historian错误截图](https://raw.githubusercontent.com/Test-Seven/youshuchang/master/007-20160410/battery-historian%E9%94%99%E8%AF%AF%E6%88%AA%E5%9B%BE.png)
 
 ### 2016年03月27日 第6节课作业 ###
 **1.写一个.fearture，上传.feature文件；#calabash-android run MyProjectDemo.apk 运行的截图。**
