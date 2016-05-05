@@ -3,7 +3,13 @@
 **1.使用java的httpclient或者okhttpclient来编写API测试用例**
 
 
-**2.battery-histrain，adb shell dumpsys batteryinfo还是batterystatus去查看wakelock**
+**2.battery-histrain，adb shell dumpsys batterystatus去查看wakelock**
+
+安装battery-histrain 2.0,安装成功
+
+运行如下命令：
+
+    $ adb bugreport > bugreport.txt
 
 
 ### 2016年03月27日 第6节课作业 ###

@@ -93,9 +93,11 @@
                 1.正向测试电量，百分比：android，IOS，setting 评估可以找竞品
                     通过自动化的方式，来获取自动化前和自动化后的电量百分比
                 2.反向电量测试：优化，间接优化电量消耗
-                    反向电量测试方法：
+                    反向电量测试方法：测试在一下几种情况下重试机制、缓存机制的电量消耗，以便优化这些策略
                     1.wakelock
-                        battery-histrain
+                        battery-histrain工具，可以在github上面找到
+                        可以将wakelock图形化找到
+                        
                     2.弱网
                         模拟热点，模拟代理的方式
                         热点：IOS开发者者模式，ATC
@@ -114,6 +116,8 @@
                     4.memory和cpu：
                         android：Android Studio里面的memory monitor
                         IOS：越狱之后，ssh登录，top
+
+
     
 
 作业：
