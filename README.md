@@ -1,5 +1,5 @@
 **youshuchang**
-### 2016年04月01日 第7节课作业 ###
+### 2016年04月10日 第7节课作业 ###
 **1.使用java的httpclient或者okhttpclient来编写API测试用例**
 
 api测试用例：
